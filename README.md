@@ -67,4 +67,4 @@ python main.py
 - Inspired by a Friday afternoon conversation with Dan Shapiro.
 - Modeled after the Rogue game by Michael Toy and Glenn Wichman with later contributions by Ken Arnold. 
 - Cursor Composer was used to write the code.
-- More info on the Rogue game can be found <a href="https://en.wikipedia.org/wiki/Rogue_(video_game)" target="_blank">here</a>.
+- More info on the Rogue game can be found [here](https://en.wikipedia.org/wiki/Rogue_(video_game)).
