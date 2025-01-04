@@ -62,33 +62,10 @@ python main.py
 - i: Open inventory
 - q: Quit game
 - Enter/Space: Interact/Attack 
+- A cheat code exists to automatically win the game
 
 ## Credits
 - Inspired by a Friday afternoon conversation with Dan Shapiro.
 - Modeled after the Rogue game by Michael Toy and Glenn Wichman with later contributions by Ken Arnold. 
 - Cursor Composer was used to write the code.
 - More info on the Rogue game can be found [here](https://en.wikipedia.org/wiki/Rogue_(video_game)).
-
-## Game Symbols
-
-| Symbol | Description |
-|--------|-------------|
-| `@` | Player character |
-| `#` | Wall |
-| `.` | Floor |
-| `+` | Door |
-| `>` | Stairs down |
-| `<` | Stairs up |
-| `M` | Monster (generic) |
-| `g` | Goblin |
-| `o` | Orc |
-| `T` | Troll |
-| `$` | Gold |
-| `!` | Potion |
-| `/` | Weapon |
-| `]` | Armor |
-| `?` | Scroll |
-| `=` | Ring |
-| `%` | Food |
-| `~` | Water |
-| ` ` | (space) Unexplored area |

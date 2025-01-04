@@ -236,13 +236,13 @@ class Game:
     def handle_input(self, key: str):
         if key.lower() == "q":
             self.running = False
-        elif key == term.KEY_UP or key.lower() == "w":
+        elif key.name == "KEY_UP" or key.lower() == "w":
             self.move_player(0, -1)
-        elif key == term.KEY_DOWN or key.lower() == "s":
+        elif key.name == "KEY_DOWN" or key.lower() == "s":
             self.move_player(0, 1)
-        elif key == term.KEY_LEFT or key.lower() == "a":
+        elif key.name == "KEY_LEFT" or key.lower() == "a":
             self.move_player(-1, 0)
-        elif key == term.KEY_RIGHT or key.lower() == "d":
+        elif key.name == "KEY_RIGHT" or key.lower() == "d":
             self.move_player(1, 0)
         elif key.lower() == "i":
             self.handle_inventory()
