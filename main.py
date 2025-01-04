@@ -73,6 +73,29 @@ class Game:
         print(term.move(center_y, center_x) + term.bold_red + message + term.normal)
         time.sleep(2)
 
+    def show_victory_screen(self):
+        # Clear screen
+        print(term.home + term.clear)
+        
+        # Calculate center of screen
+        center_y = self.height // 2
+        message = "YOU KILLED THE ANCIENT DRAGON"
+        center_x = (self.width - len(message)) // 2
+        
+        # Blink the message 5 times
+        for _ in range(5):
+            # Show message in gold
+            print(term.move(center_y, center_x) + term.bold + term.yellow + message + term.normal)
+            time.sleep(0.5)
+            # Clear message
+            print(term.move(center_y, center_x) + " " * len(message))
+            time.sleep(0.5)
+        
+        # Show final victory message
+        print(term.move(center_y, center_x) + term.bold + term.yellow + message + term.normal)
+        print(term.move(center_y + 2, center_x + (len(message) - 14) // 2) + term.green + "VICTORY ACHIEVED" + term.normal)
+        time.sleep(3)
+
     def move_player(self, dx: int, dy: int):
         new_x = self.player.x + dx
         new_y = self.player.y + dy
@@ -88,7 +111,8 @@ class Game:
                 if monster.is_dead():
                     self.messages.append(f"You killed the {monster.name}!")
                     if monster.is_boss:
-                        self.messages.append("Congratulations! You've defeated the Ancient Dragon and won the game!")
+                        self.draw()  # Draw final game state
+                        self.show_victory_screen()
                         self.running = False
                     self.monsters.remove(monster)
                 else:
@@ -222,6 +246,15 @@ class Game:
             self.move_player(1, 0)
         elif key.lower() == "i":
             self.handle_inventory()
+        elif key == "+":  # Cheat code
+            # Find the boss dragon
+            boss = next((m for m in self.monsters if m.is_boss), None)
+            if boss:
+                self.messages.append("CHEAT ACTIVATED: Ancient Dragon vanquished!")
+                self.monsters.remove(boss)
+                self.draw()  # Draw final game state
+                self.show_victory_screen()
+                self.running = False
 
 def main():
     with term.fullscreen(), term.cbreak(), term.hidden_cursor():
