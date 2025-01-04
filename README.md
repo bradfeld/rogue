@@ -12,8 +12,14 @@ A text-based implementation of the classic roguelike dungeon crawler game Rogue.
 - Items and inventory system
 - Monsters and combat
 
-## Game Symbols
+## Controls
+- Arrow keys or WASD: Move player
+- i: Open inventory
+- q: Quit game
+- Enter/Space: Interact/Attack 
+- A cheat code exists to automatically win the game
 
+## Game Symbols
 | Symbol | Description |
 |--------|-------------|
 | `@` | Player character |
@@ -56,13 +62,6 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
-
-## Controls
-- Arrow keys or WASD: Move player
-- i: Open inventory
-- q: Quit game
-- Enter/Space: Interact/Attack 
-- A cheat code exists to automatically win the game
 
 ## Credits
 - Inspired by a Friday afternoon conversation with Dan Shapiro.
