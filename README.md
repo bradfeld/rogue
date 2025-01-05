@@ -68,3 +68,4 @@ python main.py
 - Modeled after the Rogue game by Michael Toy and Glenn Wichman with later contributions by Ken Arnold. 
 - Cursor Composer was used to write the code.
 - More info on the Rogue game can be found [here](https://en.wikipedia.org/wiki/Rogue_(video_game)).
+- Bonus video of [Dan Shapiro explaining Rogue](https://www.youtube.com/watch?v=7CZJXM8PuJY)
